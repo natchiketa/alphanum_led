@@ -1,0 +1,113 @@
+.circle { border-radius: 50% }
+.blurred { -webkit-filter: blur(6px); }
+
+/* VARIABLES */
+$anl_width: 9%;
+$anl_height: 5%;
+$led_color: rgb(255, 0, 0);
+
+$color: $led_color;
+
+$alphanum_width: 150px;
+$alphanum_height: 200px;
+
+/* MAIN LED DISPLAY (container) */
+.anled {
+  background: black;
+  width: auto; height: auto;
+}
+
+.alphanum_led {
+  background: rgba(32, 0, 0, 1); position: relative; display: inline-block;
+  width: $alphanum_width; height: $alphanum_height;
+  -webkit-transform: skew(-7deg);
+}
+
+.anled.small .alphanum_led { width: 120px; height: 160px; }
+.anled.med   .alphanum_led { width: 240px; height: 320px; }
+.anled.large .alphanum_led { width: 360px; height: 480px; }
+.anled.huge  .alphanum_led { width: 480px; height: 640px; }
+
+
+/* MIXINS */
+@mixin anl_state($state) {
+  @if $state == off {
+    $color: rgba(64,64,64,0.9);
+  } @else if $state == on {
+    $color: lighten( $led_color, 15%);
+  } @else {
+    @extend .blurred;
+    $color: darken($led_color, 10%);
+  }
+}
+
+@mixin anl_stem( $blt: $anl_width, $blc: $anl_width, $brt: $anl_width, $brc: $anl_width,
+                 $trt: $anl_width, $trc: $anl_width, $tlt: $anl_width, $tlc: $anl_width,
+                 $state: off)
+{
+  @include anl_state($state);
+  background:
+    -webkit-linear-gradient(45deg,  transparent $blt, $color $blc),
+    -webkit-linear-gradient(135deg, transparent $brt, $color $brc),
+    -webkit-linear-gradient(225deg, transparent $trt, $color $trc),
+    -webkit-linear-gradient(315deg, transparent $tlt, $color $tlc);
+  background-position: bottom left, bottom right, top right, top left;
+  -moz-background-size: 50% 50%;
+  -webkit-background-size: 50% 50%;
+  background-size: 56% 58%;
+  background-repeat: no-repeat;
+
+}
+
+@mixin anl_diag($deg:45deg, $state:off)
+{
+  @include anl_state($state);
+  background:
+    -webkit-linear-gradient($deg, transparent 40%, $color 40%, $color 60%, transparent 62%);
+}
+
+/* All of the elements inside of .alphanum_led will be have absolute
+  positioning (defined in percentages to allow flexible sizing). */
+[class^="anl"] {
+  position: absolute; padding: $anl_height / 4 $anl_width / 4;
+}
+
+.led_glow { -webkit-filter: saturate(100%) contrast(90%) ; }
+
+/* abbreviate anl_width for parameters below */
+$aw: $anl_width;
+
+// Handle activated color for led elements with the .on class
+@each $anl in off, on, glow {
+
+  .anl_htop1.#{$anl} { left: 22.5%; top: 11%; width: 21%; height: $anl_height / 2 ; @include anl_stem($aw*2,$aw*2,$aw*2,$aw*2,0,0,$aw,$aw, $anl); }
+  .anl_htop2.#{$anl} { left: 51%; top: 11%; width: 21%; height: $anl_height / 2 ;   @include anl_stem($aw*2,$aw*2,$aw*2,$aw*2,$aw,$aw,0,0,$anl); }
+
+  .anl_vtop1.#{$anl} { left: 16%; top: 14%; width: $aw / 2; height: 34%; @include anl_stem(0,0,$aw*1.333,$aw*1.333,$aw*1.333,$aw*1.333,$aw,$aw,$anl); }
+  .anl_vtop2.#{$anl} { left: 45%; top: 15%; width: $aw / 2; height: 33%; @include anl_stem($aw*1.333,$aw*1.333,$aw*1.333,$aw*1.333,$aw,$aw,$aw,$aw,$anl); }
+  .anl_vtop3.#{$anl} { left: 74%; top: 14%; width: $aw / 2; height: 34%; @include anl_stem($aw*1.333,$aw*1.333,0,0,$aw,$aw,$aw*1.333,$aw*1.333,$anl); }
+
+  .anl_dtop1.#{$anl} { left: 26%; top: 16.5%; width: 13.5%; height: 29%; @include anl_diag(30deg, $anl); }
+  .anl_dtop2.#{$anl} { left: 55%; top: 16.5%; width: 13.5%; height: 29%; @include anl_diag(-30deg, $anl); }
+
+  .anl_hmid1.#{$anl} { left: 22.5%; top: 48.5%; width: 21%; height: $anl_height / 2 ; @include anl_stem($aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$anl); }
+  .anl_hmid2.#{$anl} { left: 51%; top: 48.5%; width: 21%; height: $anl_height / 2 ; @include anl_stem($aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$anl); }
+
+  .anl_vbot1.#{$anl} { left: 16%; top: 51.5%; width: $aw / 2; height: 34%; @include anl_stem($aw,$aw,$aw,$aw,$aw*1.333,$aw*1.333,0,0,$anl); }
+  .anl_vbot2.#{$anl} { left: 45%; top: 51.5%; width: $aw / 2; height: 34%; @include anl_stem($aw,$aw,$aw,$aw,$aw*1.333,$aw*1.333,$aw*1.333,$aw*1.333,$anl); }
+  .anl_vbot3.#{$anl} { left: 74%; top: 51.5%; width: $aw / 2; height: 34%; @include anl_stem($aw,$aw,$aw,$aw,0,0,$aw*1.333,$aw*1.333,$anl); }
+
+  .anl_dbot1.#{$anl} { left: 26%; top: 53.5%; width: 13.5%; height: 29%; @include anl_diag(150deg, $anl); }
+  .anl_dbot2.#{$anl} { left: 55%; top: 53.5%; width: 13.5%; height: 29%; @include anl_diag(-150deg, $anl); }
+
+  .anl_hbot1.#{$anl} { left: 22.5%; top: 86.5%; width: 21%; height: $anl_height / 2 ; @include anl_stem($aw*2,$aw*2,0,0,$aw*2,$aw*2,$aw*2,$aw*2,$anl); }
+  .anl_hbot2.#{$anl} { left: 51%; top: 86.5%; width: 21%; height: $anl_height / 2 ; @include anl_stem(0,0,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$aw*2,$anl); }
+
+  .anl_decim1.#{$anl} { @include anl_state($anl); left: 6%; top: 5%; width: 4%; height: 4%; background: $color; }
+  .anl_decim2.#{$anl} { @include anl_state($anl); left: 86%; top: 88.5%; width: 4%; height: 4%; background: $color; }
+
+}
+
+
+
+
