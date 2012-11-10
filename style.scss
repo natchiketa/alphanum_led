@@ -23,10 +23,12 @@ $alphanum_height: 200px;
   -webkit-transform: skew(-7deg);
 }
 
+.anled.tiny  .alphanum_led { width: 60px; height: 80px; }
 .anled.small .alphanum_led { width: 120px; height: 160px; }
 .anled.med   .alphanum_led { width: 240px; height: 320px; }
 .anled.large .alphanum_led { width: 360px; height: 480px; }
 .anled.huge  .alphanum_led { width: 480px; height: 640px; }
+
 
 
 /* MIXINS */
@@ -42,8 +44,8 @@ $alphanum_height: 200px;
 }
 
 @mixin anl_stem( $blt: $anl_width, $blc: $anl_width, $brt: $anl_width, $brc: $anl_width,
-                 $trt: $anl_width, $trc: $anl_width, $tlt: $anl_width, $tlc: $anl_width,
-                 $state: off)
+$trt: $anl_width, $trc: $anl_width, $tlt: $anl_width, $tlc: $anl_width,
+$state: off)
 {
   @include anl_state($state);
   background:
@@ -107,7 +109,6 @@ $aw: $anl_width;
   .anl_decim2.#{$anl} { @include anl_state($anl); left: 86%; top: 88.5%; width: 4%; height: 4%; background: $color; }
 
 }
-
 
 
 

@@ -19,6 +19,10 @@
   height: 200px;
   -webkit-transform: skew(-7deg); }
 
+.anled.tiny .alphanum_led {
+  width: 60px;
+  height: 80px; }
+
 .anled.small .alphanum_led {
   width: 120px;
   height: 160px; }
