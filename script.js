@@ -229,60 +229,47 @@ function setDisplay(dispChar, selector) {
 
     // Since we default to the last character in LED_CHARACTERS (all elements on) when the character passed
     // hasn't been defined, we'll set this to true when we match either the right character, or that default.
-    var renderedChar;
+    var renderedChar = false;
 
-    // When printing multiple characters starting at a specific position, if we run out of room, we should stop
-    // instead of matching the first position on the next display, if there is another one.
-    // TODO: or maybe we want to continue printing. Make this configurable.
-    var endOfLedDisplay;
+    $.each(LED_CHARACTERS, function (charIndex, charValue) {
 
-    endOfLedDisplay = false;
+        if ((dispChar == charValue.char || charValue.char == '__CHAR__') && !renderedChar) {
 
-/*
-    $.each(dispChar, function (index, dispCharValue) {
+            $.each(LED_ELEMENTMAP, function (elementIndex, elementValue) {
 
-        if ( !endOfLedDisplay ) {
-*/
+                // for the .led_elem block, classes should be .on or .off
+                $('.led_elem .' + elementIndex, selector)
+                    .removeClass('on off')
+                    .addClass((charValue.elements[elementValue] != ' ') ? "on" : "off");
 
-            renderedChar = false;
+                // for the .led_glow block, classes should be glow or nothing
+                $('.led_glow .' + elementIndex, selector)
+                    .removeClass('glow off')
+                    .addClass((charValue.elements[elementValue] != ' ') ? "glow" : "off");
 
-            $.each(LED_CHARACTERS, function (charIndex, charValue) {
-
-//                if ((dispCharValue == charValue.char || charValue.char == '__CHAR__') && !renderedChar) {
-                if ((dispChar == charValue.char || charValue.char == '__CHAR__') && !renderedChar) {
-
-                    $.each(LED_ELEMENTMAP, function (elementIndex, elementValue) {
-
-                        // for the .led_elem block, classes should be .on or .off
-                        $('.led_elem .' + elementIndex, selector)
-                            .removeClass('on off')
-                            .addClass((charValue.elements[elementValue] != ' ') ? "on" : "off");
-
-                        // for the .led_glow block, classes should be glow or nothing
-                        $('.led_glow .' + elementIndex, selector)
-                            .removeClass('glow off')
-                            .addClass((charValue.elements[elementValue] != ' ') ? "glow" : "off");
-
-                        // Since we've only want to render once per iteration we set this.
-                        renderedChar = true;
-
-                    });
-
-                }
-
-/*                // In case we're rendering multiple characters, set selector to the next led in the display,
-                // unless it's the last one (i.e. don't just continue on the next display)
-                selector = $(selector).next();
-                if ( $(selector).length < 1 ) {
-                    endOfLedDisplay = true;
-                }*/
+                // Since we've only want to render once per iteration we set this.
+                renderedChar = true;
 
             });
-/*        }
 
-    });*/
+        }
+
+
+    });
 
  }
+
+function printToDisplay(chars, selector) {
+
+    // Default to the last (furthest to right) element of the first display in the DOM if selector is not specified.
+    selector = (typeof selector == "undefined") ? $('.anled').last().find('.alphanum_led').last() : selector;
+
+    $.each(chars, function (index, value) {
+
+        // call setDisplay
+
+    });
+}
 
 function test() {
     setDisplay('B', '.d4');
