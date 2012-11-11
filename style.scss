@@ -30,16 +30,15 @@ $alphanum_height: 200px;
 .anled.huge  .alphanum_led { width: 480px; height: 640px; }
 
 
-
 /* MIXINS */
 @mixin anl_state($state) {
   @if $state == off {
-    $color: rgba(64,64,64,0.9);
+    $color: rgba(32,32,32,0.9);
   } @else if $state == on {
     $color: lighten( $led_color, 15%);
   } @else {
     @extend .blurred;
-    $color: darken($led_color, 10%);
+    $color: darken($led_color, 20%);
   }
 }
 
@@ -72,6 +71,8 @@ $state: off)
   positioning (defined in percentages to allow flexible sizing). */
 [class^="anl"] {
   position: absolute; padding: $anl_height / 4 $anl_width / 4;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
 }
 
 .led_glow { -webkit-filter: saturate(100%) contrast(90%) ; }

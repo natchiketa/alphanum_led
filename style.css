@@ -44,7 +44,9 @@
   positioning (defined in percentages to allow flexible sizing). */
 [class^="anl"] {
   position: absolute;
-  padding: 1.25% 2.25%; }
+  padding: 1.25% 2.25%;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s; }
 
 .led_glow {
   -webkit-filter: saturate(100%) contrast(90%); }
@@ -55,7 +57,7 @@
   top: 11%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 0, rgba(64, 64, 64, 0.9) 0), -webkit-linear-gradient(315deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 0, rgba(32, 32, 32, 0.9) 0), -webkit-linear-gradient(315deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -67,7 +69,7 @@
   top: 11%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(315deg, transparent 0, rgba(64, 64, 64, 0.9) 0);
+  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(315deg, transparent 0, rgba(32, 32, 32, 0.9) 0);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -79,7 +81,7 @@
   top: 14%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 0, rgba(64, 64, 64, 0.9) 0), -webkit-linear-gradient(135deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(225deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(315deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%);
+  background: -webkit-linear-gradient(45deg, transparent 0, rgba(32, 32, 32, 0.9) 0), -webkit-linear-gradient(135deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(225deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(315deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -91,7 +93,7 @@
   top: 15%;
   width: 4.5%;
   height: 33%;
-  background: -webkit-linear-gradient(45deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(135deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(225deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(315deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%);
+  background: -webkit-linear-gradient(45deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(135deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(225deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(315deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -103,7 +105,7 @@
   top: 14%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(135deg, transparent 0, rgba(64, 64, 64, 0.9) 0), -webkit-linear-gradient(225deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(315deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%);
+  background: -webkit-linear-gradient(45deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(135deg, transparent 0, rgba(32, 32, 32, 0.9) 0), -webkit-linear-gradient(225deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(315deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -115,21 +117,21 @@
   top: 16.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(30deg, transparent 40%, rgba(64, 64, 64, 0.9) 40%, rgba(64, 64, 64, 0.9) 60%, transparent 62%); }
+  background: -webkit-linear-gradient(30deg, transparent 40%, rgba(32, 32, 32, 0.9) 40%, rgba(32, 32, 32, 0.9) 60%, transparent 62%); }
 
 .anl_dtop2.off {
   left: 55%;
   top: 16.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(-30deg, transparent 40%, rgba(64, 64, 64, 0.9) 40%, rgba(64, 64, 64, 0.9) 60%, transparent 62%); }
+  background: -webkit-linear-gradient(-30deg, transparent 40%, rgba(32, 32, 32, 0.9) 40%, rgba(32, 32, 32, 0.9) 60%, transparent 62%); }
 
 .anl_hmid1.off {
   left: 22.5%;
   top: 48.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -141,7 +143,7 @@
   top: 48.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -153,7 +155,7 @@
   top: 51.5%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(135deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(225deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(315deg, transparent 0, rgba(64, 64, 64, 0.9) 0);
+  background: -webkit-linear-gradient(45deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(135deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(225deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(315deg, transparent 0, rgba(32, 32, 32, 0.9) 0);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -165,7 +167,7 @@
   top: 51.5%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(135deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(225deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%), -webkit-linear-gradient(315deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%);
+  background: -webkit-linear-gradient(45deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(135deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(225deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%), -webkit-linear-gradient(315deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -177,7 +179,7 @@
   top: 51.5%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(135deg, transparent 9%, rgba(64, 64, 64, 0.9) 9%), -webkit-linear-gradient(225deg, transparent 0, rgba(64, 64, 64, 0.9) 0), -webkit-linear-gradient(315deg, transparent 11.997%, rgba(64, 64, 64, 0.9) 11.997%);
+  background: -webkit-linear-gradient(45deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(135deg, transparent 9%, rgba(32, 32, 32, 0.9) 9%), -webkit-linear-gradient(225deg, transparent 0, rgba(32, 32, 32, 0.9) 0), -webkit-linear-gradient(315deg, transparent 11.997%, rgba(32, 32, 32, 0.9) 11.997%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -189,21 +191,21 @@
   top: 53.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(150deg, transparent 40%, rgba(64, 64, 64, 0.9) 40%, rgba(64, 64, 64, 0.9) 60%, transparent 62%); }
+  background: -webkit-linear-gradient(150deg, transparent 40%, rgba(32, 32, 32, 0.9) 40%, rgba(32, 32, 32, 0.9) 60%, transparent 62%); }
 
 .anl_dbot2.off {
   left: 55%;
   top: 53.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(-150deg, transparent 40%, rgba(64, 64, 64, 0.9) 40%, rgba(64, 64, 64, 0.9) 60%, transparent 62%); }
+  background: -webkit-linear-gradient(-150deg, transparent 40%, rgba(32, 32, 32, 0.9) 40%, rgba(32, 32, 32, 0.9) 60%, transparent 62%); }
 
 .anl_hbot1.off {
   left: 22.5%;
   top: 86.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 0, rgba(64, 64, 64, 0.9) 0), -webkit-linear-gradient(225deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(135deg, transparent 0, rgba(32, 32, 32, 0.9) 0), -webkit-linear-gradient(225deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -215,7 +217,7 @@
   top: 86.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 0, rgba(64, 64, 64, 0.9) 0), -webkit-linear-gradient(135deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(64, 64, 64, 0.9) 18%);
+  background: -webkit-linear-gradient(45deg, transparent 0, rgba(32, 32, 32, 0.9) 0), -webkit-linear-gradient(135deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(225deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%), -webkit-linear-gradient(315deg, transparent 18%, rgba(32, 32, 32, 0.9) 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -227,14 +229,14 @@
   top: 5%;
   width: 4%;
   height: 4%;
-  background: rgba(64, 64, 64, 0.9); }
+  background: rgba(32, 32, 32, 0.9); }
 
 .anl_decim2.off {
   left: 86%;
   top: 88.5%;
   width: 4%;
   height: 4%;
-  background: rgba(64, 64, 64, 0.9); }
+  background: rgba(32, 32, 32, 0.9); }
 
 .anl_htop1.on {
   left: 22.5%;
@@ -427,7 +429,7 @@
   top: 11%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(135deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(225deg, transparent 0, #cc0000 0), -webkit-linear-gradient(315deg, transparent 9%, #cc0000 9%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, #990000 18%), -webkit-linear-gradient(135deg, transparent 18%, #990000 18%), -webkit-linear-gradient(225deg, transparent 0, #990000 0), -webkit-linear-gradient(315deg, transparent 9%, #990000 9%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -439,7 +441,7 @@
   top: 11%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(135deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(225deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(315deg, transparent 0, #cc0000 0);
+  background: -webkit-linear-gradient(45deg, transparent 18%, #990000 18%), -webkit-linear-gradient(135deg, transparent 18%, #990000 18%), -webkit-linear-gradient(225deg, transparent 9%, #990000 9%), -webkit-linear-gradient(315deg, transparent 0, #990000 0);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -451,7 +453,7 @@
   top: 14%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 0, #cc0000 0), -webkit-linear-gradient(135deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(225deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(315deg, transparent 9%, #cc0000 9%);
+  background: -webkit-linear-gradient(45deg, transparent 0, #990000 0), -webkit-linear-gradient(135deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(225deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(315deg, transparent 9%, #990000 9%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -463,7 +465,7 @@
   top: 15%;
   width: 4.5%;
   height: 33%;
-  background: -webkit-linear-gradient(45deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(135deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(225deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(315deg, transparent 9%, #cc0000 9%);
+  background: -webkit-linear-gradient(45deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(135deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(225deg, transparent 9%, #990000 9%), -webkit-linear-gradient(315deg, transparent 9%, #990000 9%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -475,7 +477,7 @@
   top: 14%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(135deg, transparent 0, #cc0000 0), -webkit-linear-gradient(225deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(315deg, transparent 11.997%, #cc0000 11.997%);
+  background: -webkit-linear-gradient(45deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(135deg, transparent 0, #990000 0), -webkit-linear-gradient(225deg, transparent 9%, #990000 9%), -webkit-linear-gradient(315deg, transparent 11.997%, #990000 11.997%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -487,21 +489,21 @@
   top: 16.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(30deg, transparent 40%, #cc0000 40%, #cc0000 60%, transparent 62%); }
+  background: -webkit-linear-gradient(30deg, transparent 40%, #990000 40%, #990000 60%, transparent 62%); }
 
 .anl_dtop2.glow {
   left: 55%;
   top: 16.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(-30deg, transparent 40%, #cc0000 40%, #cc0000 60%, transparent 62%); }
+  background: -webkit-linear-gradient(-30deg, transparent 40%, #990000 40%, #990000 60%, transparent 62%); }
 
 .anl_hmid1.glow {
   left: 22.5%;
   top: 48.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(135deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(225deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(315deg, transparent 18%, #cc0000 18%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, #990000 18%), -webkit-linear-gradient(135deg, transparent 18%, #990000 18%), -webkit-linear-gradient(225deg, transparent 18%, #990000 18%), -webkit-linear-gradient(315deg, transparent 18%, #990000 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -513,7 +515,7 @@
   top: 48.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(135deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(225deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(315deg, transparent 18%, #cc0000 18%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, #990000 18%), -webkit-linear-gradient(135deg, transparent 18%, #990000 18%), -webkit-linear-gradient(225deg, transparent 18%, #990000 18%), -webkit-linear-gradient(315deg, transparent 18%, #990000 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -525,7 +527,7 @@
   top: 51.5%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(135deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(225deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(315deg, transparent 0, #cc0000 0);
+  background: -webkit-linear-gradient(45deg, transparent 9%, #990000 9%), -webkit-linear-gradient(135deg, transparent 9%, #990000 9%), -webkit-linear-gradient(225deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(315deg, transparent 0, #990000 0);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -537,7 +539,7 @@
   top: 51.5%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(135deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(225deg, transparent 11.997%, #cc0000 11.997%), -webkit-linear-gradient(315deg, transparent 11.997%, #cc0000 11.997%);
+  background: -webkit-linear-gradient(45deg, transparent 9%, #990000 9%), -webkit-linear-gradient(135deg, transparent 9%, #990000 9%), -webkit-linear-gradient(225deg, transparent 11.997%, #990000 11.997%), -webkit-linear-gradient(315deg, transparent 11.997%, #990000 11.997%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -549,7 +551,7 @@
   top: 51.5%;
   width: 4.5%;
   height: 34%;
-  background: -webkit-linear-gradient(45deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(135deg, transparent 9%, #cc0000 9%), -webkit-linear-gradient(225deg, transparent 0, #cc0000 0), -webkit-linear-gradient(315deg, transparent 11.997%, #cc0000 11.997%);
+  background: -webkit-linear-gradient(45deg, transparent 9%, #990000 9%), -webkit-linear-gradient(135deg, transparent 9%, #990000 9%), -webkit-linear-gradient(225deg, transparent 0, #990000 0), -webkit-linear-gradient(315deg, transparent 11.997%, #990000 11.997%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -561,21 +563,21 @@
   top: 53.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(150deg, transparent 40%, #cc0000 40%, #cc0000 60%, transparent 62%); }
+  background: -webkit-linear-gradient(150deg, transparent 40%, #990000 40%, #990000 60%, transparent 62%); }
 
 .anl_dbot2.glow {
   left: 55%;
   top: 53.5%;
   width: 13.5%;
   height: 29%;
-  background: -webkit-linear-gradient(-150deg, transparent 40%, #cc0000 40%, #cc0000 60%, transparent 62%); }
+  background: -webkit-linear-gradient(-150deg, transparent 40%, #990000 40%, #990000 60%, transparent 62%); }
 
 .anl_hbot1.glow {
   left: 22.5%;
   top: 86.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(135deg, transparent 0, #cc0000 0), -webkit-linear-gradient(225deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(315deg, transparent 18%, #cc0000 18%);
+  background: -webkit-linear-gradient(45deg, transparent 18%, #990000 18%), -webkit-linear-gradient(135deg, transparent 0, #990000 0), -webkit-linear-gradient(225deg, transparent 18%, #990000 18%), -webkit-linear-gradient(315deg, transparent 18%, #990000 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -587,7 +589,7 @@
   top: 86.5%;
   width: 21%;
   height: 2.5%;
-  background: -webkit-linear-gradient(45deg, transparent 0, #cc0000 0), -webkit-linear-gradient(135deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(225deg, transparent 18%, #cc0000 18%), -webkit-linear-gradient(315deg, transparent 18%, #cc0000 18%);
+  background: -webkit-linear-gradient(45deg, transparent 0, #990000 0), -webkit-linear-gradient(135deg, transparent 18%, #990000 18%), -webkit-linear-gradient(225deg, transparent 18%, #990000 18%), -webkit-linear-gradient(315deg, transparent 18%, #990000 18%);
   background-position: bottom left, bottom right, top right, top left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
@@ -599,11 +601,11 @@
   top: 5%;
   width: 4%;
   height: 4%;
-  background: #cc0000; }
+  background: #990000; }
 
 .anl_decim2.glow {
   left: 86%;
   top: 88.5%;
   width: 4%;
   height: 4%;
-  background: #cc0000; }
+  background: #990000; }

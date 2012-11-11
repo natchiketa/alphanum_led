@@ -260,8 +260,8 @@ function setDisplay(dispChar, selector) {
 
                         // for the .led_glow block, classes should be glow or nothing
                         $('.led_glow .' + elementIndex, selector)
-                            .removeClass('glow')
-                            .addClass((charValue.elements[elementValue] != ' ') ? "glow" : "");
+                            .removeClass('glow off')
+                            .addClass((charValue.elements[elementValue] != ' ') ? "glow" : "off");
 
                         // Since we've only want to render once per iteration we set this.
                         renderedChar = true;
