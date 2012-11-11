@@ -264,9 +264,12 @@ function printToDisplay(chars, selector) {
     // Default to the last (furthest to right) element of the first display in the DOM if selector is not specified.
     selector = (typeof selector == "undefined") ? $('.anled').last().find('.alphanum_led').last() : selector;
 
-    $.each(chars, function (index, value) {
+    $.each(chars, function (charIndex, charValue) {
 
-        // call setDisplay
+        if ( $(selector).length > 0) {
+            setDisplay(charValue, selector);
+            selector = $(selector).next();
+        }
 
     });
 }
